@@ -6,11 +6,9 @@ function search_form_rem() {
  //Put the page ID inside the array(); - as '1', '2', '3', etc.
   $page_not = array();
 
-	$page_exclude[] = 'page-id-' . $page_not;
-
-	if( $page_exclude ) {
-    	return;
-	}
+  if( is_page( $page_not ) ) {
+    return;
+  }
 
   echo '<div class="section-title line-style"><h3 class="title">Advanced Search</h3></div>&nbsp;';
 
